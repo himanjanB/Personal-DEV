@@ -13,7 +13,7 @@ public with sharing class AccountTriggerHelper {
         List<Contact> contactList = new List<Contact>();
         for(Account acc : accountList) {
             for(Contact con : acc.Contacts) {
-                con.AccoutUpdated__c = acc.ContactUpdated__c;
+                con.AccountUpdated__c = acc.ContactUpdated__c;
                 contactList.add(con);
             }
         }
