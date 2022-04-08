@@ -1,0 +1,12 @@
+<apex:page >
+    <apex:pageBlock title="Account Information">
+        <apex:pageBlockSection >
+            <apex:pageBlockSectionItem >Name</apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+        
+    </apex:pageBlock>
+    
+    <apex:pageBlock title="Other information">
+        
+    </apex:pageBlock>
+</apex:page>

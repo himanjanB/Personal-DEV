@@ -1,0 +1,5 @@
+<apex:page controller="TestClass">
+    <apex:form >
+    	<apex:inputText value="{!Name}"/>
+    </apex:form>
+</apex:page>

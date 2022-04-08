@@ -1,0 +1,8 @@
+<apex:page showHeader="false" sidebar="false" title="Happy Travels">
+    <apex:image alt="Header Image" value="{!$Resource.HeaderImageMain}" height="100px" width="100%"/>
+    <apex:pageBlock title="Packages">
+    	<apex:pageBlockSection >
+        	Himanjan        
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

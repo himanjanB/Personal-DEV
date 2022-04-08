@@ -1,0 +1,30 @@
+<apex:page controller="AddBuildingsAndFlats">
+    <apex:pageBlock title="Lease Management System">  
+        <apex:pageBlockSection title="Add Buildings and Flats">
+            <apex:form >
+                <apex:outputLink value="{!URLFOR($Action.Building__c.New)}">Create New Building</apex:outputLink>
+                <!--<apex:commandButton value="Add Building" styleClass="buttonStyle" style="background:LightBlue;width:150px;" /> -->
+                &nbsp;&nbsp;
+                <!--<apex:commandButton value="Add Flats" styleClass="buttonStyle" style="background:LightBlue;width:150px;" /> -->
+            	<apex:outputLink value="{!URLFOR($Action.Flat__c.New)}">Create New Flat</apex:outputLink>
+            </apex:form>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Search Contracts">
+                <apex:form >
+                    <apex:outputText value="Search by Tenant name or Building name"></apex:outputText>
+                    &nbsp;&nbsp;
+                    <apex:inputText value="{!searchValue}" label="Input"/>
+                    <br/><br/>
+                    <apex:commandButton value="Search Contracts" action="{!searchContracts}" styleClass="buttonStyle" style="background:LightBlue;width:120px;" />
+                    <apex:commandButton value="Clear Search" action="{!clearSearch}" styleClass="buttonStyle" style="background:LightBlue;width:120px;" />
+                	<br/><br/> 
+                    <apex:pageBlock title="Search Result">
+                    <apex:pageBlockTable value="{!contractList}" var="contract">
+                        <apex:column value="{!contract.ContractNumber}"/>
+                        <apex:column value="{!contract.id}"/>
+                    </apex:pageBlockTable>
+                </apex:pageBlock>
+            	</apex:form>          
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,16 @@
+<apex:page standardController="Account" extensions="TestClass">
+    <apex:sectionHeader title="{!$ObjectType.Account.label} Detail" subtitle="{!IF(ISNULL(Account.Name), 'New Account',Account.Name)}"/>
+    <apex:form >
+        <apex:pageBlock mode="maindetail">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton action="{!Save}" value="Custom Save"/>
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection title="Advanced Details" collapsible="true">
+                <apex:outputField value="{!Account.Name}"/>
+                <apex:outputField value="{!Account.Phone}"/>
+                <apex:outputField value="{!Account.AccountNumber}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

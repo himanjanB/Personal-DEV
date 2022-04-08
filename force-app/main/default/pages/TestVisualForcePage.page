@@ -1,0 +1,15 @@
+<apex:page standardController="Contact" recordSetVar="contacts">
+    <apex:pageBlock title="Contacts">
+        <apex:pageBlockTable value="{! contacts }" var="cnt">
+            <apex:column value="{! cnt.Name}"/>
+            <apex:column value="{! cnt.Title}"/>
+            <apex:column value="{! cnt.Phone}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    <apex:pageBlock title="User Details">
+        <apex:pageBlockSection title="Personal Information" >
+            <apex:outputText label="First Name" value="{! $User.FirstName }" />
+            <apex:outputText label="Last Name" value="{! $User.LastName }" />
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

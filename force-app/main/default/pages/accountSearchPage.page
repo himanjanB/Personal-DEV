@@ -1,0 +1,23 @@
+<apex:page controller="SearchController">
+    <apex:form >
+        <apex:inputText value="{!searchString}" label="Input"/>
+        <apex:commandButton value="Search Records" action="{!search}"/>
+        <apex:commandButton value="Clear Records" action="{!clear}"/>
+        <apex:pageBlock title="Search Result">
+            
+            <apex:pageBlockTable value="{!accountList}" var="accList">
+                <apex:column value="{!accList.name}"/>
+                <apex:column value="{!accList.id}"/>
+                <apex:column value="{!accList.phone}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        
+        <apex:pageBlock title="Search Result">
+            <apex:dataTable value="{!accountList}" var="accList">
+                <apex:column value="{!accList.name}"/>
+                <apex:column value="{!accList.id}"/>
+                <apex:column value="{!accList.phone}"/>            	
+            </apex:dataTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
