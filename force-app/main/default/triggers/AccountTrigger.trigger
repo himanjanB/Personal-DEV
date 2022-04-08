@@ -1,4 +1,4 @@
-trigger AccountTrigger on Account (before update, after update) {
+trigger AccountTrigger on Account (before update) {
     
     AccountTriggerHandler.updateContactCheckbox(Trigger.new);
 }
