@@ -38,6 +38,7 @@
 
     closeQA : function(component, event, helper) {
         component.set("v.isModalOpen", false);
+        console.log('Changing something to see if I can push this to GIT');
         $A.get("e.force.closeQuickAction").fire();
         var parentEvent = component.getEvent("passMethod");
         parentEvent.fire();
