@@ -1,4 +1,7 @@
-trigger AccountTrigger on Account (before update) {
+trigger AccountTrigger on Account (after update) {
     
-    AccountTriggerHandler.updateContactCheckbox(Trigger.new);
+    if(AccountTriggerHandler.isFirstTime) {
+        AccountTriggerHandler.isFirstTime = False;
+        AccountTriggerHandler.updateContactCheckbox(Trigger.new);
+    }
 }
