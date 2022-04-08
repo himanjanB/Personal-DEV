@@ -1,5 +1,4 @@
-trigger AccountTrigger on Account (before insert) {
+trigger AccountTrigger on Account (before update, after update) {
     
-    AccountTriggerHandler.updateAddresses(Trigger.New);
-    System.debug('Size of Trigger New ' + Trigger.New.size());
+    AccountTriggerHandler.updateContactCheckbox(Trigger.new);
 }

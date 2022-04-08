@@ -4,4 +4,8 @@ public class AccountTriggerHandler {
         //Some comment here to describe better
         AccountTriggerHelper.updateAddresses(newAccountList);
     }
+
+    public static void updateContactCheckbox(List<Account> newAccountList) {
+        AccountTriggerHelper.updateCheckBox(newAccountList);
+    }
 }
